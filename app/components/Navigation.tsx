@@ -26,7 +26,7 @@ export default function Navigation() {
               alt="Dennison's Venison Logo"
               className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-brand-olive hidden sm:block">
+            <span className="font-serif text-xl font-bold text-brand-olive hidden sm:block">
               Dennison's Venison
             </span>
           </Link>

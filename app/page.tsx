@@ -14,18 +14,40 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-olive via-brand-olive to-[#4a4a38] text-brand-cream overflow-hidden"
+          className="relative min-h-screen flex items-center justify-center text-brand-cream overflow-hidden"
         >
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/WhatsApp Image 2025-10-22 at 17.58.00_dc48d23d.jpg')" }}
+          ></div>
+
+          {/* Gradient Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-olive/80 via-brand-olive/75 to-black/60"></div>
+
           {/* Subtle grain texture overlay */}
           <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L3N2Zz4=')]"></div>
 
           <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center z-10">
             <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className="mb-8"
+            >
+              <img
+                src="/Venison (1).png"
+                alt="Dennison's Venison Logo"
+                className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.1]">
+              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.1]">
                 From the hills<br />to your plate.
               </h1>
             </motion.div>
@@ -56,14 +78,14 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center bg-brand-cream text-brand-olive px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-white"
+                className="font-serif group inline-flex items-center justify-center bg-brand-cream text-brand-olive px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-white"
               >
                 Get in Touch
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 href="/products"
-                className="group inline-flex items-center justify-center border-2 border-brand-cream text-brand-cream px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-brand-cream/10 hover:scale-105 backdrop-blur-sm"
+                className="font-serif group inline-flex items-center justify-center border-2 border-brand-cream text-brand-cream px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-brand-cream/10 hover:scale-105 backdrop-blur-sm"
               >
                 Our Venison
               </Link>
@@ -152,7 +174,7 @@ export default function Home() {
         <section className="py-24 bg-brand-cream">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-brand-olive mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-olive mb-6">
                 🦌 Wild • Honest • Fair
               </h2>
             </div>
@@ -186,7 +208,7 @@ export default function Home() {
                   <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {card.emoji}
                   </div>
-                  <h3 className="text-2xl font-bold text-brand-olive mb-4">
+                  <h3 className="font-serif text-2xl font-bold text-brand-olive mb-4">
                     {card.title}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
