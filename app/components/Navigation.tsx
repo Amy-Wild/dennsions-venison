@@ -20,8 +20,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-brand-olive hover:opacity-70 transition-opacity">
-            Dennison's Venison
+          <Link href="/" className="flex items-center gap-3 hover:opacity-70 transition-opacity">
+            <img
+              src="/Venison.png"
+              alt="Dennison's Venison Logo"
+              className="h-12 w-auto"
+            />
+            <span className="text-xl font-bold text-brand-olive hidden sm:block">
+              Dennison's Venison
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

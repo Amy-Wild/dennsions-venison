@@ -107,6 +107,47 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
+        {/* Image Showcase Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-24">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+              >
+                <img
+                  src="/WhatsApp Image 2025-10-17 at 15.35.25_be617f51.jpg"
+                  alt="Wild venison from Dennison's Venison"
+                  className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
+                  <p className="text-white text-2xl font-bold">From the Scottish Highlands</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+              >
+                <img
+                  src="/WhatsApp Image 2025-10-19 at 10.39.24_5ad32a1d.jpg"
+                  alt="Ethical deer management by Lee Dennison"
+                  className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
+                  <p className="text-white text-2xl font-bold">Ethical & Sustainable</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Overview Section */}
         <section className="py-24 bg-brand-cream">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
