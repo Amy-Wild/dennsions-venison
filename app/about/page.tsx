@@ -22,9 +22,9 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-white pt-20">
+      <main className="min-h-screen bg-brand-gray pt-20">
         {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-white">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-gray">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial="initial"
@@ -33,7 +33,9 @@ export default function About() {
               className="text-center mb-16"
             >
               <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <span className="text-7xl">🌲</span>
+                <div className="w-32 h-32 rounded-full bg-[#5b5b47] flex items-center justify-center shadow-[0_20px_60px_-20px_rgba(91,91,71,0.4)] p-6">
+                  <img src="/Venison.png" alt="Dennison's Venison Deer Logo" className="w-full h-full object-contain" />
+                </div>
               </motion.div>
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-brand-olive mb-6">
                 About Us
@@ -44,7 +46,7 @@ export default function About() {
         </section>
 
         {/* Story Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-brand-gray">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
               <motion.div
@@ -75,7 +77,24 @@ export default function About() {
                 transition={{ duration: 0.8 }}
                 className="bg-gradient-to-br from-brand-cream to-white p-10 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(91,91,71,0.25)] border border-brand-olive/10 hover:shadow-[0_30px_100px_-20px_rgba(91,91,71,0.35)] transition-all duration-500"
               >
-                <h3 className="font-serif text-3xl md:text-4xl font-bold text-brand-olive mb-6">Lee Dennison</h3>
+                {/* Lee's Image with circular fade */}
+                <div className="relative w-48 h-48 mx-auto mb-8">
+                  {/* Outer glow */}
+                  <div className="absolute inset-0 rounded-full bg-brand-olive/20 blur-2xl scale-110"></div>
+
+                  {/* Image container with circular mask and gradient fade */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-brand-olive/30 ring-offset-4 ring-offset-transparent shadow-[0_20px_60px_-15px_rgba(91,91,71,0.4)]">
+                    <img
+                      src="/Lee1.jpg"
+                      alt="Lee Dennison"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Subtle vignette fade on the circular image */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(91,91,71,0.15)_100%)]"></div>
+                  </div>
+                </div>
+
+                <h3 className="font-serif text-3xl md:text-4xl font-bold text-brand-olive mb-6 text-center">Lee Dennison</h3>
                 <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
                   <p>
                     Lee Dennison is a qualified deer manager with over 10 years' experience stalking and managing wild deer across the UK.

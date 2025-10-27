@@ -16,7 +16,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-olive/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#5b5b47] border-b border-brand-cream/20 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -26,7 +26,7 @@ export default function Navigation() {
               alt="Dennison's Venison Logo"
               className="h-12 w-auto"
             />
-            <span className="font-serif text-xl font-bold text-brand-olive hidden sm:block">
+            <span className="font-serif text-xl font-bold text-brand-cream hidden sm:block">
               Dennison's Venison
             </span>
           </Link>
@@ -37,7 +37,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-brand-olive hover:text-brand-olive/70 transition-colors font-medium"
+                className="text-brand-cream hover:text-brand-cream/70 transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -47,7 +47,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-brand-olive p-2"
+            className="md:hidden text-brand-cream p-2"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,14 +65,14 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden py-4 border-t border-brand-olive/10"
+            className="md:hidden py-4 border-t border-brand-cream/20"
           >
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-3 text-brand-olive hover:bg-brand-cream/50 px-4 rounded-lg transition-colors"
+                className="block py-3 text-brand-cream hover:bg-brand-cream/10 px-4 rounded-lg transition-colors"
               >
                 {link.label}
               </Link>

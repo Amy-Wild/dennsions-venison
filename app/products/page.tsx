@@ -22,9 +22,9 @@ export default function Products() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-white pt-20">
+      <main className="min-h-screen bg-brand-gray pt-20">
         {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-white">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-gray">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial="initial"
@@ -32,9 +32,6 @@ export default function Products() {
               variants={stagger}
               className="text-center mb-16"
             >
-              <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <span className="font-serif text-7xl">🥩</span>
-              </motion.div>
               <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl font-bold text-brand-olive mb-6">
                 Our Venison
               </motion.h1>
@@ -46,7 +43,7 @@ export default function Products() {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-brand-gray">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -123,17 +120,29 @@ export default function Products() {
             >
               {[
                 {
-                  icon: "✓",
+                  icon: (
+                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ),
                   title: "Wild & Natural",
                   desc: "No farming, no hormones – just wild deer from the UK countryside"
                 },
                 {
-                  icon: "✓",
+                  icon: (
+                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ),
                   title: "Full Hygiene Standards",
                   desc: "Processed to the highest food safety and hygiene regulations"
                 },
                 {
-                  icon: "✓",
+                  icon: (
+                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ),
                   title: "Fair Pricing",
                   desc: "Quality, sustainable meat that's accessible to everyone"
                 }
@@ -143,7 +152,13 @@ export default function Products() {
                   variants={fadeInUp}
                   className="text-center p-8 bg-brand-cream rounded-2xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(91,91,71,0.25)] hover:-translate-y-2"
                 >
-                  <div className="font-serif text-4xl text-brand-olive font-bold mb-4">{feature.icon}</div>
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-16 h-16 rounded-full bg-brand-olive flex items-center justify-center text-brand-cream shadow-[0_10px_30px_-10px_rgba(91,91,71,0.3)]">
+                      <div className="w-8 h-8">
+                        {feature.icon}
+                      </div>
+                    </div>
+                  </div>
                   <h3 className="text-xl font-bold text-brand-olive mb-3">{feature.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{feature.desc}</p>
                 </motion.div>
@@ -158,9 +173,14 @@ export default function Products() {
               transition={{ duration: 0.6 }}
               className="text-center bg-brand-olive text-brand-cream p-16 rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.5)]"
             >
-              <p className="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                🦌 Nothing wasted.<br />Everything respected.
-              </p>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <svg className="w-12 h-12 text-brand-cream" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 20 L45 15 L42 20 M50 20 L55 15 L58 20 M50 20 L50 30 M50 30 C45 32 40 35 40 42 C40 50 43 55 50 60 C57 55 60 50 60 42 C60 35 55 32 50 30 M35 45 L30 50 M65 45 L70 50 M50 60 L50 75 M45 70 L40 80 M55 70 L60 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <p className="font-serif text-4xl md:text-5xl font-bold tracking-tight">
+                  Nothing wasted.<br />Everything respected.
+                </p>
+              </div>
               <p className="font-serif text-xl md:text-2xl font-light opacity-90">
                 Wild • Honest • Fair
               </p>

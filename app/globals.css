@@ -8,6 +8,6 @@
   }
 
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 bg-brand-gray;
   }
 }
