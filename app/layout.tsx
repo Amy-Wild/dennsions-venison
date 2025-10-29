@@ -32,20 +32,8 @@ export const metadata: Metadata = {
     title: "Dennison's Venison | Wild, Honest, Fair",
     description: 'Premium wild venison and professional deer management services.',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
+  robots: 'index, follow',
+  metadataBase: new URL('https://www.dennisonsvenison.co.uk'),
 }
 
 export default function RootLayout({

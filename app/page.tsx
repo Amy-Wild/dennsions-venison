@@ -10,12 +10,7 @@ export default function Home() {
       <Navigation />
       <main className="min-h-screen bg-brand-gray pt-20">
         {/* Hero Section */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="relative min-h-screen flex items-center justify-center text-brand-cream overflow-hidden"
-        >
+        <section className="relative min-h-screen flex items-center justify-center text-brand-cream overflow-hidden">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -33,9 +28,9 @@ export default function Home() {
 
           <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center z-10">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.1 }}
+              whileInView={{ scale: [0.95, 1] }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               className="mb-8 mt-16 md:mt-20"
             >
               <div className="relative inline-block group">
@@ -54,40 +49,21 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
+            <div>
               <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.1]">
                 From the hills<br />to your plate.
               </h1>
-            </motion.div>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl sm:text-2xl md:text-3xl mb-6 max-w-3xl mx-auto font-light leading-relaxed opacity-90"
-            >
+            <p className="text-xl sm:text-2xl md:text-3xl mb-6 max-w-3xl mx-auto font-light leading-relaxed opacity-90">
               Founded by Lee Dennison, built on honesty, respect for the countryside, and the belief that everyone deserves access to good, natural food.
-            </motion.p>
+            </p>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg md:text-xl mb-12 italic opacity-75 font-light"
-            >
+            <p className="text-lg md:text-xl mb-12 italic opacity-75 font-light">
               "I believe in feeding people real food, responsibly sourced, and giving back to the land that provides it."
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="font-serif group inline-flex items-center justify-center bg-brand-cream text-brand-olive px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-white"
@@ -101,15 +77,10 @@ export default function Home() {
               >
                 Our Venison
               </Link>
-            </motion.div>
+            </div>
 
             {/* Quick links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="mt-20 flex flex-wrap justify-center gap-6"
-            >
+            <div className="mt-20 flex flex-wrap justify-center gap-6">
               <Link
                 href="/about"
                 className="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm border border-brand-cream/20 rounded-full hover:bg-white/20 hover:border-brand-cream/40 transition-all duration-300"
@@ -147,16 +118,11 @@ export default function Home() {
                 </svg>
                 <span className="text-brand-cream font-medium">Wild Venison</span>
               </Link>
-            </motion.div>
+            </div>
           </div>
 
           {/* Scroll indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2"
-          >
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
             <Link href="/about">
               <motion.div
                 animate={{ y: [0, 10, 0] }}
@@ -166,18 +132,17 @@ export default function Home() {
                 <div className="w-1.5 h-1.5 bg-brand-cream/60 rounded-full"></div>
               </motion.div>
             </Link>
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
 
         {/* Image Showcase Section */}
         <section className="py-24 bg-brand-gray">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-8 mb-24">
               <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ x: [-20, 0] }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6 }}
                 className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
               >
                 <img
@@ -191,10 +156,9 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ x: [20, 0] }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6 }}
                 className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
               >
                 <img

@@ -1,0 +1,14 @@
+# Dennison's Venison - Wild, Honest, Fair
+# Premium wild venison and deer management services
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.dennisonsvenison.co.uk/sitemap.xml
