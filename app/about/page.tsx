@@ -101,9 +101,6 @@ export default function About() {
                     Lee Dennison is a qualified deer manager with over 10 years' experience stalking and managing wild deer across the UK.
                   </p>
                   <p>
-                    He's DSC1, DSC2, Trained Hunter, Quad trained, and NatureScot Fit & Competent Approved (Ref 3999).
-                  </p>
-                  <p>
                     Working from Bradshaw Trees Farm in Mellor, Dennison's Venison supplies traceable, sustainable wild venison direct from the countryside to local customers, restaurants, and friends of the land.
                   </p>
                 </div>
