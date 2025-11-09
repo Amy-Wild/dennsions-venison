@@ -1,36 +1,39 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://www.dennisonsvenison.co.uk'
+
   return [
     {
-      url: 'https://www.dennisonsvenison.co.uk',
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: 'https://www.dennisonsvenison.co.uk/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.dennisonsvenison.co.uk/products',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.dennisonsvenison.co.uk/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.dennisonsvenison.co.uk/contact',
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 }
+
