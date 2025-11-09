@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true
-  }
+  reactStrictMode: true,
+  // Optional: tweak images if you host remote images
+  // images: { domains: ['your-cdn-or-remote-host.com'] },
 }
-
 module.exports = nextConfig
+
