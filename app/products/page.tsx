@@ -21,6 +21,34 @@ const stagger = {
 export default function Products() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: 'Wild Venison Products',
+            description: 'Premium wild venison burgers, sausages, and gourmet sausage rolls. Ethically sourced, fully traceable, processed to highest hygiene standards.',
+            brand: {
+              '@type': 'Organization',
+              name: "Dennison's Venison",
+            },
+            offers: {
+              '@type': 'AggregateOffer',
+              availability: 'https://schema.org/InStock',
+              priceCurrency: 'GBP',
+              lowPrice: '5.00',
+              highPrice: '25.00',
+              seller: {
+                '@type': 'Organization',
+                name: "Dennison's Venison",
+              },
+            },
+            category: 'Wild Venison',
+            image: 'https://www.dennisonsvenison.co.uk/og-image-products.jpg',
+          }),
+        }}
+      />
       <Navigation />
       <main className="min-h-screen bg-brand-gray pt-20">
         {/* Hero */}
@@ -79,6 +107,7 @@ export default function Products() {
                 <img
                   src="/WhatsApp Image 2025-10-17 at 15.35.25_be617f51.jpg"
                   alt="Wild venison from Dennison's Venison"
+                  loading="lazy"
                   className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/90 via-brand-olive/40 to-transparent flex items-end p-10">
@@ -99,6 +128,7 @@ export default function Products() {
                 <img
                   src="/WhatsApp Image 2025-10-19 at 10.39.24_5ad32a1d.jpg"
                   alt="Ethical deer management"
+                  loading="lazy"
                   className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/90 via-brand-olive/40 to-transparent flex items-end p-10">

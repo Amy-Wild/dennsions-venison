@@ -87,6 +87,7 @@ export default function About() {
                     <img
                       src="/Lee1.jpg"
                       alt="Lee Dennison"
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle vignette fade on the circular image */}

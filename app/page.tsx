@@ -148,6 +148,7 @@ export default function Home() {
                 <img
                   src="/scotland1.jpg"
                   alt="Wild venison from Dennison's Venison"
+                  loading="lazy"
                   className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
@@ -164,6 +165,7 @@ export default function Home() {
                 <img
                   src="/WhatsApp Image 2025-10-19 at 10.39.24_5ad32a1d.jpg"
                   alt="Ethical deer management by Lee Dennison"
+                  loading="lazy"
                   className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
@@ -199,7 +201,7 @@ export default function Home() {
                 },
                 {
                   icon: (
-                    <img src="/Venison.png" alt="Deer logo" className="w-full h-full object-contain" />
+                    <img src="/Venison.png" alt="Deer logo" loading="lazy" className="w-full h-full object-contain" />
                   ),
                   title: "Our Venison",
                   desc: "Wild, locally sourced, and processed to the highest food-hygiene standards",

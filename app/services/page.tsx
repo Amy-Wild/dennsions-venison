@@ -81,6 +81,7 @@ export default function Services() {
                 <img
                   src="/scotland4.jpg"
                   alt="Scottish Highland landscape"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 {/* Contrasting vignette fade - darker edges, lighter center */}
@@ -105,6 +106,7 @@ export default function Services() {
                 <img
                   src="/scotland6.jpg"
                   alt="Scottish countryside"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 {/* Contrasting vignette fade - darker edges, lighter center */}
