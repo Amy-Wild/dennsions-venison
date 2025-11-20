@@ -194,27 +194,6 @@ export default function Products() {
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* Statement */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center bg-brand-olive text-brand-cream p-16 rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.5)]"
-            >
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <svg className="w-12 h-12 text-brand-cream" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M50 20 L45 15 L42 20 M50 20 L55 15 L58 20 M50 20 L50 30 M50 30 C45 32 40 35 40 42 C40 50 43 55 50 60 C57 55 60 50 60 42 C60 35 55 32 50 30 M35 45 L30 50 M65 45 L70 50 M50 60 L50 75 M45 70 L40 80 M55 70 L60 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <p className="font-serif text-4xl md:text-5xl font-bold tracking-tight">
-                  Nothing wasted.<br />Everything respected.
-                </p>
-              </div>
-              <p className="font-serif text-xl md:text-2xl font-light opacity-90">
-                Wild • Honest • Fair
-              </p>
-            </motion.div>
           </div>
         </section>
 

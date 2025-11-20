@@ -107,6 +107,50 @@ export default function About() {
               </motion.div>
             </div>
 
+            {/* Professional Qualifications */}
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="mt-24 mb-24"
+            >
+              <motion.h2 variants={fadeInUp} className="font-serif text-4xl md:text-5xl font-bold text-brand-olive text-center mb-16">
+                Professional Qualifications & Certifications
+              </motion.h2>
+
+              <motion.div variants={fadeInUp} className="bg-gradient-to-br from-brand-cream to-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(91,91,71,0.25)] border border-brand-olive/10">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[
+                    { title: "DSC1", desc: "Deer Stalking Certificate Level 1" },
+                    { title: "DSC2", desc: "Deer Stalking Certificate Level 2" },
+                    { title: "Hunter's Hygiene", desc: "Large Game Meat Hygiene Certificate" },
+                    { title: "Food Hygiene", desc: "Wild Game Handling - FSA Compliant" },
+                    { title: "Night Shooting", desc: "NatureScot Authorisation - Ref 3999" },
+                    { title: "Plant Machinery", desc: "NPORS Operator No. 765490 - Excavator, Dumper & Plant Machinery" },
+                    { title: "First Aid", desc: "Outdoor / Forestry First Aid - Valid for 3 Years" },
+                    { title: "Chainsaw Operation", desc: "Course Scheduled Jan 2026" },
+                    { title: "Full UK Driving Licence", desc: "" },
+                    { title: "British Deer Society", desc: "Member (BDS)" },
+                    { title: "Insurance", desc: "Public Liability & Deer-Management Insurance" }
+                  ].map((item, i) => (
+                    <motion.div
+                      key={i}
+                      variants={fadeInUp}
+                      className="group p-6 bg-white rounded-xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(91,91,71,0.2)] hover:-translate-y-1"
+                    >
+                      <h4 className="font-semibold text-brand-olive mb-2 text-lg group-hover:scale-105 transition-transform duration-300">
+                        {item.title}
+                      </h4>
+                      {item.desc && (
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+
             {/* Values */}
             <motion.div
               initial="initial"

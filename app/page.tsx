@@ -80,13 +80,15 @@ export default function Home() {
             </div>
 
             {/* Quick links */}
-            <div className="mt-20 flex flex-wrap justify-center gap-6">
+            <div className="mt-20 mb-16 flex flex-wrap justify-center gap-6">
               <Link
                 href="/about"
                 className="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm border border-brand-cream/20 rounded-full hover:bg-white/20 hover:border-brand-cream/40 transition-all duration-300"
               >
                 <svg className="w-5 h-5 text-brand-cream" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4L10 2L8 4M12 4L14 2L16 4M12 4V7M12 7C10.5 7.5 9 8.5 9 10.5C9 13 10.5 14.5 12 16C13.5 14.5 15 13 15 10.5C15 8.5 13.5 7.5 12 7M7 11L5 12M17 11L19 12M12 16V20M10 18L8 20M14 18L16 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M4 19.5C4 18.837 4.5 18 5.5 18H18.5C19.5 18 20 18.837 20 19.5C20 20.163 19.5 21 18.5 21H5.5C4.5 21 4 20.163 4 19.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 18V3.5C6 3.224 6.224 3 6.5 3H17.5C17.776 3 18 3.224 18 3.5V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 7H15M9 11H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
                 <span className="text-brand-cream font-medium">Our Story</span>
               </Link>
@@ -119,19 +121,6 @@ export default function Home() {
                 <span className="text-brand-cream font-medium">Wild Venison</span>
               </Link>
             </div>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
-            <Link href="/about">
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-6 h-10 border-2 border-brand-cream/40 rounded-full flex justify-center pt-2 cursor-pointer hover:border-brand-cream/70 transition-colors"
-              >
-                <div className="w-1.5 h-1.5 bg-brand-cream/60 rounded-full"></div>
-              </motion.div>
-            </Link>
           </div>
         </section>
 
@@ -190,9 +179,10 @@ export default function Home() {
                 {
                   icon: (
                     <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Deer silhouette */}
-                      <path d="M50 20 L45 15 L42 20 M50 20 L55 15 L58 20 M50 20 L50 30 M50 30 C45 32 40 35 40 42 C40 50 43 55 50 60 C57 55 60 50 60 42 C60 35 55 32 50 30 M35 45 L30 50 M65 45 L70 50 M50 60 L50 75 M45 70 L40 80 M55 70 L60 80"
-                        stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      {/* Book icon */}
+                      <path d="M20 75C20 72 22 70 25 70H75C78 70 80 72 80 75C80 78 78 80 75 80H25C22 80 20 78 20 75Z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M27 70V20C27 18 28 17 29 17H71C73 17 74 18 74 20V70" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M37 35H63M37 50H63" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
                     </svg>
                   ),
                   title: "About Us",
@@ -226,7 +216,7 @@ export default function Home() {
                 <Link
                   key={i}
                   href={card.link}
-                  className="group block bg-brand-gray p-10 rounded-3xl shadow-[0_20px_60px_-20px_rgba(91,91,71,0.2)] hover:shadow-[0_30px_80px_-20px_rgba(91,91,71,0.35)] border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-500 hover:-translate-y-2"
+                  className="group block bg-brand-gray pt-10 px-10 pb-14 rounded-3xl shadow-[0_20px_60px_-20px_rgba(91,91,71,0.2)] hover:shadow-[0_30px_80px_-20px_rgba(91,91,71,0.35)] border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-500 hover:-translate-y-2"
                 >
                   {/* Elegant line icon */}
                   <div className="mb-8 flex justify-center">
@@ -247,7 +237,7 @@ export default function Home() {
                   <p className="text-gray-700 leading-relaxed">
                     {card.desc}
                   </p>
-                  <div className="mt-6 inline-flex items-center text-brand-olive font-semibold group-hover:translate-x-2 transition-transform">
+                  <div className="mt-6 mb-4 inline-flex items-center text-brand-olive font-semibold group-hover:translate-x-2 transition-transform">
                     Learn more →
                   </div>
                 </Link>

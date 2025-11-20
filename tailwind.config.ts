@@ -13,7 +13,7 @@ const config: Config = {
           olive: '#5b5b47',  // Main background color
           cream: '#fffff0',  // Accent color
           black: '#000000',
-          gray: '#f5f5f5',   // Soft background color
+          gray: '#f2ede3',   // Warm stone background color
         },
       },
       fontFamily: {
