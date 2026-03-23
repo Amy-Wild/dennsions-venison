@@ -21,9 +21,9 @@ export default function Contact() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-brand-gray pt-20">
+      <main className="min-h-screen bg-brand-stone pt-20">
         {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-gray">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial="initial"
@@ -32,17 +32,17 @@ export default function Contact() {
               className="text-center mb-16"
             >
               <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-olive to-brand-olive/80 flex items-center justify-center shadow-[0_20px_60px_-20px_rgba(91,91,71,0.4)]">
-                  <svg className="w-16 h-16 text-brand-cream" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-forest to-brand-forest/80 flex items-center justify-center shadow-[0_20px_60px_-20px_rgba(45,59,45,0.4)]">
+                  <svg className="w-16 h-16 text-brand-copper" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl font-bold text-brand-olive mb-6">
+              <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl font-bold text-brand-charcoal mb-6">
                 Get in Touch
               </motion.h1>
-              <motion.p variants={fadeInUp} className="font-serif text-2xl md:text-3xl text-gray-700 max-w-3xl mx-auto font-light">
-                Let's discuss your venison or deer management needs
+              <motion.p variants={fadeInUp} className="font-serif text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light">
+                Discuss your venison or deer management needs
               </motion.p>
             </motion.div>
           </div>
@@ -56,10 +56,10 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-brand-cream to-white p-12 md:p-16 lg:p-20 rounded-[2.5rem] shadow-[0_25px_100px_-20px_rgba(91,91,71,0.3)] border border-brand-olive/10"
+              className="bg-gradient-to-br from-brand-forest to-brand-forest/90 p-12 md:p-16 lg:p-20 rounded-[2.5rem] shadow-[0_25px_100px_-20px_rgba(45,59,45,0.3)]"
             >
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brand-olive mb-12 text-center">
-                Lee Dennison – Founder, Dennison's Venison
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brand-cream mb-12 text-center">
+                Lee Dennison - Founder, Dennisons Venison
               </h2>
 
               <div className="space-y-8">
@@ -105,6 +105,26 @@ export default function Contact() {
                     label: "Web:",
                     value: "www.dennisonsvenison.co.uk",
                     link: null
+                  },
+                  {
+                    icon: (
+                      <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    ),
+                    label: "Facebook:",
+                    value: "Dennisons Venison",
+                    link: "https://www.facebook.com/share/18NwAMn6Eu/"
+                  },
+                  {
+                    icon: (
+                      <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                      </svg>
+                    ),
+                    label: "Instagram:",
+                    value: "@dennisons.venison",
+                    link: "https://www.instagram.com/dennisons.venison?utm_source=qr&igsh=MXEyemU2eW9xb2gxdQ=="
                   }
                 ].map((item, i) => (
                   <motion.div
@@ -113,22 +133,23 @@ export default function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="flex items-start gap-6 p-6 rounded-2xl hover:bg-brand-gray/70 transition-colors duration-300"
+                    className="flex items-start gap-6 p-6 rounded-2xl hover:bg-brand-cream/10 transition-colors duration-300"
                   >
-                    <div className="w-12 h-12 rounded-full bg-brand-olive flex items-center justify-center flex-shrink-0 text-brand-cream">
+                    <div className="w-12 h-12 rounded-full bg-brand-copper flex items-center justify-center flex-shrink-0 text-brand-cream">
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <span className="block font-semibold text-brand-olive text-lg mb-2">{item.label}</span>
+                      <span className="block font-semibold text-brand-copper text-lg mb-2">{item.label}</span>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="font-serif block text-gray-800 hover:text-brand-olive transition-colors text-xl md:text-2xl underline decoration-brand-olive/30 hover:decoration-brand-olive"
+                          {...(item.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                          className="font-serif block text-brand-cream hover:text-brand-copper transition-colors text-xl md:text-2xl underline decoration-brand-copper/30 hover:decoration-brand-copper"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <span className="font-serif block text-gray-800 text-xl md:text-2xl">{item.value}</span>
+                        <span className="font-serif block text-brand-cream text-xl md:text-2xl">{item.value}</span>
                       )}
                     </div>
                   </motion.div>
@@ -142,12 +163,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-16 text-center"
               >
-                <div className="inline-flex items-center gap-4 bg-brand-olive text-brand-cream px-10 py-6 rounded-[2rem]">
-                  <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 20 L45 15 L42 20 M50 20 L55 15 L58 20 M50 20 L50 30 M50 30 C45 32 40 35 40 42 C40 50 43 55 50 60 C57 55 60 50 60 42 C60 35 55 32 50 30 M35 45 L30 50 M65 45 L70 50 M50 60 L50 75 M45 70 L40 80 M55 70 L60 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <p className="font-serif text-3xl md:text-4xl font-bold">Wild • Honest • Fair</p>
-                </div>
+                <p className="font-serif text-3xl md:text-4xl font-bold text-brand-cream tracking-wide">Wild - Honest - Fair</p>
               </motion.div>
             </motion.div>
           </div>
@@ -163,15 +179,19 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-olive mb-8">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-charcoal mb-8">
                 Service Areas
               </h2>
               <p className="font-serif text-xl md:text-2xl text-gray-700 mb-6 font-light max-w-4xl mx-auto">
                 Providing professional deer management services across:
               </p>
-              <p className="text-lg md:text-xl text-brand-olive font-semibold leading-relaxed max-w-5xl mx-auto">
-                Scottish Borders • Northumberland • Cumbria • Derbyshire • Staffordshire • Shropshire • Herefordshire • Worcestershire • Gloucestershire • Northamptonshire
-              </p>
+              <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto mb-8">
+                {["Scottish Borders", "Northumberland", "Cumbria", "Derbyshire", "Staffordshire", "Shropshire", "Herefordshire", "Worcestershire", "Gloucestershire", "Northamptonshire"].map((region, i) => (
+                  <span key={i} className="px-4 py-2 bg-brand-sage text-brand-cream rounded-full text-sm font-medium">
+                    {region}
+                  </span>
+                ))}
+              </div>
               <p className="text-lg text-gray-600 mt-8 italic">
                 Not in the listed areas? Get in touch – we may be able to help or provide recommendations.
               </p>
@@ -179,61 +199,56 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Quick Info */}
-        <section className="py-16 md:py-24 bg-brand-gray">
+        {/* What We Offer */}
+        <section className="py-16 md:py-24 bg-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: (
-                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L10 1L8 2M12 2L14 1L16 2M12 2V4M12 4C10.5 4.5 9 5.5 9 7C9 9 10.5 10 12 11C13.5 10 15 9 15 7C15 5.5 13.5 4.5 12 4M7 7L5 8M17 7L19 8M12 11V18M10 15L8 17M14 15L16 17M5 22H19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  ),
                   title: "Deer Management",
-                  desc: "Professional, ethical deer population control and habitat protection"
+                  desc: "Professional, ethical deer population control and habitat protection",
+                  image: "/scottish scene 3.jpeg",
+                  link: "/services"
                 },
                 {
-                  icon: (
-                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="7" y="6" width="10" height="12" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-                      <path d="M7 10H17M7 14H17" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2"/>
-                      <circle cx="12" cy="8" r="0.5" fill="currentColor"/>
-                      <circle cx="12" cy="12" r="0.5" fill="currentColor"/>
-                      <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
-                    </svg>
-                  ),
                   title: "Wild Venison",
-                  desc: "Premium wild venison products, fully traceable from hill to plate"
+                  desc: "Premium wild venison products, fully traceable from hill to plate",
+                  image: "/Venison Meat - hero image",
+                  link: "/products"
                 },
                 {
-                  icon: (
-                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  ),
                   title: "Fully Qualified",
-                  desc: "DSC1, DSC2, NatureScot approved with 10+ years experience"
+                  desc: "DSC1, DSC2, NatureScot approved with 10+ years experience",
+                  image: "/lee with deer.jpeg",
+                  link: "/about"
                 }
               ].map((card, i) => (
-                <motion.div
+                <motion.a
                   key={i}
+                  href={card.link}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="text-center p-8 bg-brand-cream rounded-2xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(91,91,71,0.25)] hover:-translate-y-2"
+                  className="group block rounded-3xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(45,59,45,0.2)] hover:shadow-[0_30px_80px_-20px_rgba(45,59,45,0.35)] border border-brand-forest/10 hover:border-brand-copper/30 transition-all duration-500 hover:-translate-y-2 bg-brand-stone"
                 >
-                  <div className="mb-6 flex justify-center">
-                    <div className="w-20 h-20 rounded-full bg-brand-olive flex items-center justify-center text-brand-cream shadow-[0_10px_30px_-10px_rgba(91,91,71,0.3)]">
-                      <div className="w-10 h-10">
-                        {card.icon}
-                      </div>
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-bottom group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 to-transparent"></div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-bold text-brand-charcoal mb-3">{card.title}</h3>
+                    <p className="text-gray-700 leading-relaxed text-sm">{card.desc}</p>
+                    <div className="mt-4 inline-flex items-center text-brand-copper font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                      Learn more →
                     </div>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-brand-olive mb-4">{card.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{card.desc}</p>
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </div>

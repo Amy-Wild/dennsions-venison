@@ -10,10 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          olive: '#5b5b47',  // Main background color
-          cream: '#fffff0',  // Accent color
-          black: '#000000',
-          gray: '#f2ede3',   // Warm stone background color
+          forest: '#5b5b47',   // Brand green from logo – nav, dark sections, headings
+          cream: '#faf6f0',    // Warm ivory – backgrounds, text on dark
+          copper: '#c17f3e',   // Warm copper/amber – accents, CTAs, highlights
+          charcoal: '#2c2c24', // Darker shade of brand green – deep backgrounds, text
+          stone: '#eee8dc',    // Warm stone – page background, cards
+          sage: '#7d7d65',     // Lighter shade of brand green – secondary accents, borders
         },
       },
       fontFamily: {

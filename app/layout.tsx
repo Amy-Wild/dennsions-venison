@@ -15,10 +15,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Dennison's Venison | Wild, Honest, Fair | Sustainable Venison from the UK",
+  title: "Dennisons Venison | Wild, Honest, Fair | Sustainable Venison from the UK",
   description: 'Premium wild venison and professional deer management services across the UK. Ethical, sustainable, and traceable from hill to plate. Based at Bradshaw Trees Farm, Mellor.',
   keywords: 'venison, wild venison, deer management, sustainable meat, UK venison, Scottish venison, Mellor, Stockport, ethical hunting, deer stalking, wild game',
-  authors: [{ name: "Dennison's Venison" }],
+  authors: [{ name: "Dennisons Venison" }],
   alternates: {
     canonical: 'https://www.dennisonsvenison.co.uk',
   },
@@ -26,23 +26,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://www.dennisonsvenison.co.uk',
-    title: "Dennison's Venison | Wild, Honest, Fair",
+    title: "Dennisons Venison | Wild, Honest, Fair",
     description: 'Premium wild venison and professional deer management services. Ethical, sustainable, and traceable from hill to plate.',
-    siteName: "Dennison's Venison",
+    siteName: "Dennisons Venison",
     images: [
       {
-        url: 'https://www.dennisonsvenison.co.uk/og-image.jpg',
+        url: 'https://www.dennisonsvenison.co.uk/scottish scene.jpeg',
         width: 1200,
         height: 630,
-        alt: "Dennison's Venison - Wild, Honest, Fair",
+        alt: "Dennisons Venison - Wild, Honest, Fair",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Dennison's Venison | Wild, Honest, Fair",
+    title: "Dennisons Venison | Wild, Honest, Fair",
     description: 'Premium wild venison and professional deer management services.',
-    images: ['https://www.dennisonsvenison.co.uk/og-image.jpg'],
+    images: ['https://www.dennisonsvenison.co.uk/scottish scene.jpeg'],
   },
   robots: 'index, follow',
   metadataBase: new URL('https://www.dennisonsvenison.co.uk'),
@@ -62,7 +62,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: "Dennison's Venison",
+              name: "Dennisons Venison",
               description: 'Premium wild venison and professional deer management services',
               url: 'https://www.dennisonsvenison.co.uk',
               logo: 'https://www.dennisonsvenison.co.uk/logo.png',

@@ -22,9 +22,9 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-brand-gray pt-20">
+      <main className="min-h-screen bg-brand-stone pt-20">
         {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-gray">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial="initial"
@@ -33,20 +33,20 @@ export default function About() {
               className="text-center mb-16"
             >
               <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <div className="w-32 h-32 rounded-full bg-[#5b5b47] flex items-center justify-center shadow-[0_20px_60px_-20px_rgba(91,91,71,0.4)] p-6">
-                  <img src="/Venison.png" alt="Dennison's Venison Deer Logo" className="w-full h-full object-contain" />
+                <div className="w-32 h-32 rounded-full bg-brand-forest flex items-center justify-center shadow-[0_20px_60px_-20px_rgba(45,59,45,0.4)] p-6">
+                  <img src="/Venison.png" alt="Dennisons Venison Deer Logo" className="w-full h-full object-contain" />
                 </div>
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-brand-olive mb-6">
+              <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-brand-charcoal mb-6">
                 About Us
               </motion.h1>
-              <motion.div variants={fadeInUp} className="w-24 h-1 bg-brand-olive mx-auto rounded-full"></motion.div>
+              <motion.div variants={fadeInUp} className="w-24 h-1 bg-brand-copper mx-auto rounded-full"></motion.div>
             </motion.div>
           </div>
         </section>
 
         {/* Story Section */}
-        <section className="py-16 md:py-24 bg-brand-gray">
+        <section className="py-16 md:py-24 bg-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
               <motion.div
@@ -56,7 +56,7 @@ export default function About() {
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
               >
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-olive mb-6">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-charcoal mb-6">
                   From the hills to your plate
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-light">
@@ -65,7 +65,7 @@ export default function About() {
                 <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-light">
                   By keeping prices fair, Lee aims to make wild, sustainable venison accessible to local people during a time when so many are being priced out by a broken system.
                 </p>
-                <blockquote className="border-l-4 border-brand-olive pl-6 italic text-xl text-gray-700 mt-8">
+                <blockquote className="border-l-4 border-brand-copper pl-6 italic text-xl text-gray-700 mt-8">
                   "I believe in feeding people real food, responsibly sourced, and giving back to the land that provides it."
                 </blockquote>
               </motion.div>
@@ -75,15 +75,15 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-brand-cream to-white p-10 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(91,91,71,0.25)] border border-brand-olive/10 hover:shadow-[0_30px_100px_-20px_rgba(91,91,71,0.35)] transition-all duration-500"
+                className="bg-gradient-to-br from-brand-cream to-white p-10 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(45,59,45,0.25)] border border-brand-forest/10 hover:shadow-[0_30px_100px_-20px_rgba(45,59,45,0.35)] transition-all duration-500"
               >
                 {/* Lee's Image with circular fade */}
                 <div className="relative w-48 h-48 mx-auto mb-8">
                   {/* Outer glow */}
-                  <div className="absolute inset-0 rounded-full bg-brand-olive/20 blur-2xl scale-110"></div>
+                  <div className="absolute inset-0 rounded-full bg-brand-copper/20 blur-2xl scale-110"></div>
 
                   {/* Image container with circular mask and gradient fade */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-brand-olive/30 ring-offset-4 ring-offset-transparent shadow-[0_20px_60px_-15px_rgba(91,91,71,0.4)]">
+                  <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-brand-copper/30 ring-offset-4 ring-offset-transparent shadow-[0_20px_60px_-15px_rgba(193,127,62,0.4)]">
                     <img
                       src="/Lee1.jpg"
                       alt="Lee Dennison"
@@ -91,17 +91,17 @@ export default function About() {
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle vignette fade on the circular image */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(91,91,71,0.15)_100%)]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(45,59,45,0.15)_100%)]"></div>
                   </div>
                 </div>
 
-                <h3 className="font-serif text-3xl md:text-4xl font-bold text-brand-olive mb-6 text-center">Lee Dennison</h3>
+                <h3 className="font-serif text-3xl md:text-4xl font-bold text-brand-charcoal mb-6 text-center">Lee Dennison</h3>
                 <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
                   <p>
                     Lee Dennison is a qualified deer manager with over 10 years' experience stalking and managing wild deer across the UK.
                   </p>
                   <p>
-                    Working from Bradshaw Trees Farm in Mellor, Dennison's Venison supplies traceable, sustainable wild venison direct from the countryside to local customers, restaurants, and friends of the land.
+                    Working from Bradshaw Trees Farm in Mellor, Dennisons Venison supplies traceable, sustainable wild venison direct from the countryside to local customers, restaurants, and friends of the land.
                   </p>
                 </div>
               </motion.div>
@@ -115,11 +115,11 @@ export default function About() {
               variants={stagger}
               className="mt-24 mb-24"
             >
-              <motion.h2 variants={fadeInUp} className="font-serif text-4xl md:text-5xl font-bold text-brand-olive text-center mb-16">
+              <motion.h2 variants={fadeInUp} className="font-serif text-4xl md:text-5xl font-bold text-brand-charcoal text-center mb-16">
                 Professional Qualifications & Certifications
               </motion.h2>
 
-              <motion.div variants={fadeInUp} className="bg-gradient-to-br from-brand-cream to-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(91,91,71,0.25)] border border-brand-olive/10">
+              <motion.div variants={fadeInUp} className="bg-gradient-to-br from-brand-cream to-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_80px_-20px_rgba(45,59,45,0.25)] border border-brand-forest/10">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[
                     { title: "DSC1", desc: "Deer Stalking Certificate Level 1" },
@@ -137,14 +137,21 @@ export default function About() {
                     <motion.div
                       key={i}
                       variants={fadeInUp}
-                      className="group p-6 bg-white rounded-xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(91,91,71,0.2)] hover:-translate-y-1"
+                      className="group p-6 bg-brand-forest rounded-xl border border-brand-forest/20 hover:border-brand-copper/30 transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(45,59,45,0.2)] hover:-translate-y-1"
                     >
-                      <h4 className="font-semibold text-brand-olive mb-2 text-lg group-hover:scale-105 transition-transform duration-300">
-                        {item.title}
-                      </h4>
-                      {item.desc && (
-                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                      )}
+                      <div className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-brand-copper flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <div>
+                          <h4 className="font-semibold text-brand-cream mb-2 text-lg group-hover:scale-105 transition-transform duration-300">
+                            {item.title}
+                          </h4>
+                          {item.desc && (
+                            <p className="text-sm text-brand-cream/70 leading-relaxed">{item.desc}</p>
+                          )}
+                        </div>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -159,7 +166,7 @@ export default function About() {
               variants={stagger}
               className="mt-24"
             >
-              <motion.h2 variants={fadeInUp} className="font-serif text-4xl md:text-5xl font-bold text-brand-olive text-center mb-16">
+              <motion.h2 variants={fadeInUp} className="font-serif text-4xl md:text-5xl font-bold text-brand-charcoal text-center mb-16">
                 What We Stand For
               </motion.h2>
 
@@ -173,12 +180,12 @@ export default function About() {
                   <motion.div
                     key={i}
                     variants={fadeInUp}
-                    className="group text-center p-8 bg-brand-cream rounded-2xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(91,91,71,0.25)] hover:-translate-y-2"
+                    className="group text-center p-8 bg-brand-stone rounded-2xl border border-brand-sage/20 hover:border-brand-copper/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(45,59,45,0.25)] hover:-translate-y-2"
                   >
-                    <h4 className="font-serif font-bold text-brand-olive mb-2 text-xl group-hover:scale-105 transition-transform duration-300">
+                    <h4 className="font-serif font-bold text-brand-forest mb-2 text-xl group-hover:scale-105 transition-transform duration-300">
                       {item.title}
                     </h4>
-                    <p className="text-sm text-gray-600 mb-4">{item.subtitle}</p>
+                    <p className="text-sm text-brand-copper mb-4">{item.subtitle}</p>
                     <p className="text-sm text-gray-700 leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}
@@ -188,7 +195,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24 bg-brand-olive text-brand-cream">
+        <section className="py-16 md:py-24 bg-brand-forest text-brand-cream">
           <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -205,7 +212,7 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center bg-brand-cream text-brand-olive px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-white"
+                  className="inline-flex items-center justify-center bg-brand-copper text-brand-cream px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-brand-copper/90"
                 >
                   Our Venison
                 </Link>

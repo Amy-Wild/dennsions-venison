@@ -31,7 +31,7 @@ export default function Products() {
             description: 'Premium wild venison burgers, sausages, and gourmet sausage rolls. Ethically sourced, fully traceable, processed to highest hygiene standards.',
             brand: {
               '@type': 'Organization',
-              name: "Dennison's Venison",
+              name: "Dennisons Venison",
             },
             offers: {
               '@type': 'AggregateOffer',
@@ -41,7 +41,7 @@ export default function Products() {
               highPrice: '25.00',
               seller: {
                 '@type': 'Organization',
-                name: "Dennison's Venison",
+                name: "Dennisons Venison",
               },
             },
             category: 'Wild Venison',
@@ -50,9 +50,9 @@ export default function Products() {
         }}
       />
       <Navigation />
-      <main className="min-h-screen bg-brand-gray pt-20">
+      <main className="min-h-screen bg-brand-stone pt-20">
         {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-gray">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-brand-cream to-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial="initial"
@@ -60,10 +60,10 @@ export default function Products() {
               variants={stagger}
               className="text-center mb-16"
             >
-              <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl font-bold text-brand-olive mb-6">
+              <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl font-bold text-brand-charcoal mb-6">
                 Our Venison
               </motion.h1>
-              <motion.p variants={fadeInUp} className="font-serif text-2xl md:text-3xl text-gray-700 max-w-3xl mx-auto font-light">
+              <motion.p variants={fadeInUp} className="font-serif text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light">
                 Wild, locally sourced, and processed with full food-hygiene standards
               </motion.p>
             </motion.div>
@@ -71,7 +71,7 @@ export default function Products() {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 md:py-24 bg-brand-gray">
+        <section className="py-16 md:py-24 bg-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -80,8 +80,8 @@ export default function Products() {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto mb-20"
             >
-              <div className="bg-gradient-to-br from-brand-cream to-white p-12 md:p-16 rounded-[2.5rem] shadow-[0_25px_100px_-20px_rgba(91,91,71,0.3)] border border-brand-olive/10">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-olive mb-8">
+              <div className="bg-gradient-to-br from-brand-cream to-white p-12 md:p-16 rounded-[2.5rem] shadow-[0_25px_100px_-20px_rgba(45,59,45,0.3)] border border-brand-forest/10">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-charcoal mb-8">
                   From the highlands to your table
                 </h2>
                 <div className="font-serif space-y-6 text-xl md:text-2xl text-gray-800 leading-relaxed font-light">
@@ -102,18 +102,18 @@ export default function Products() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(45,59,45,0.4)] group"
               >
                 <img
-                  src="/WhatsApp Image 2025-10-17 at 15.35.25_be617f51.jpg"
-                  alt="Wild venison from Dennison's Venison"
+                  src="/Raw butcher pack - burgers and sausage.jpeg"
+                  alt="Raw wild venison burgers and sausages"
                   loading="lazy"
                   className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/90 via-brand-olive/40 to-transparent flex items-end p-10">
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/40 to-transparent flex items-end p-10">
                   <div>
-                    <p className="font-serif text-white text-3xl font-bold mb-2">Premium Quality</p>
-                    <p className="text-brand-cream text-lg">Wild venison, ethically sourced</p>
+                    <p className="font-serif text-white text-3xl font-bold mb-2">Wild Venison</p>
+                    <p className="text-brand-cream text-lg">Ethically sourced from the UK countryside</p>
                   </div>
                 </div>
               </motion.div>
@@ -123,15 +123,15 @@ export default function Products() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(45,59,45,0.4)] group"
               >
                 <img
-                  src="/WhatsApp Image 2025-10-19 at 10.39.24_5ad32a1d.jpg"
-                  alt="Ethical deer management"
+                  src="/venison stew - hero"
+                  alt="Venison stew"
                   loading="lazy"
                   className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/90 via-brand-olive/40 to-transparent flex items-end p-10">
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/40 to-transparent flex items-end p-10">
                   <div>
                     <p className="font-serif text-white text-3xl font-bold mb-2">Fully Traceable</p>
                     <p className="text-brand-cream text-lg">From hill to plate</p>
@@ -180,17 +180,17 @@ export default function Products() {
                 <motion.div
                   key={i}
                   variants={fadeInUp}
-                  className="text-center p-8 bg-brand-cream rounded-2xl border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(91,91,71,0.25)] hover:-translate-y-2"
+                  className="text-center p-8 bg-brand-forest rounded-2xl border border-brand-forest/20 hover:border-brand-copper/30 transition-all duration-300 hover:shadow-[0_20px_60px_-20px_rgba(45,59,45,0.25)] hover:-translate-y-2"
                 >
                   <div className="mb-4 flex justify-center">
-                    <div className="w-16 h-16 rounded-full bg-brand-olive flex items-center justify-center text-brand-cream shadow-[0_10px_30px_-10px_rgba(91,91,71,0.3)]">
+                    <div className="w-16 h-16 rounded-full bg-brand-copper flex items-center justify-center text-brand-cream shadow-[0_10px_30px_-10px_rgba(193,127,62,0.3)]">
                       <div className="w-8 h-8">
                         {feature.icon}
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-brand-olive mb-3">{feature.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-xl font-bold text-brand-cream mb-3">{feature.title}</h3>
+                  <p className="text-brand-cream/80 leading-relaxed">{feature.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -206,7 +206,7 @@ export default function Products() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-olive mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-charcoal mb-6">
                 Interested in our venison?
               </h2>
               <p className="font-serif text-xl md:text-2xl text-gray-700 mb-10 font-light">
@@ -214,7 +214,7 @@ export default function Products() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center bg-brand-olive text-brand-cream px-12 py-5 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                className="inline-flex items-center justify-center bg-brand-copper text-brand-cream px-12 py-5 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-brand-copper/90"
               >
                 Contact Us →
               </Link>

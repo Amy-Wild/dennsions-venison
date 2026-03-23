@@ -4,27 +4,33 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Navigation from './components/Navigation'
 
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }
+}
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
 export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-brand-gray pt-20">
+      <main className="min-h-screen bg-brand-stone pt-20">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center text-brand-cream overflow-hidden">
-          {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/WhatsApp Image 2025-10-22 at 17.58.00_dc48d23d.jpg')" }}
+            style={{ backgroundImage: "url('/scottish scene.jpeg')" }}
           ></div>
-
-          {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-olive/80 via-brand-olive/75 to-black/60"></div>
-
-          {/* Vignette Effect - darker edges, lighter center */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_30%,rgba(0,0,0,0.5)_65%,rgba(0,0,0,0.8)_100%)]"></div>
-
-          {/* Subtle grain texture overlay */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L3N2Zz4=')]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-charcoal/75 via-brand-charcoal/55 to-brand-forest/40"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_40%,rgba(26,26,24,0.4)_70%,rgba(26,26,24,0.7)_100%)]"></div>
 
           <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center z-10">
             <motion.div
@@ -34,26 +40,20 @@ export default function Home() {
               className="mb-8 mt-16 md:mt-20"
             >
               <div className="relative inline-block group">
-                {/* Layered glow effects */}
-                <div className="absolute inset-0 rounded-full bg-brand-cream/20 blur-3xl scale-110 opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-                <div className="absolute inset-0 rounded-full bg-brand-cream/10 blur-2xl scale-125 opacity-40 group-hover:opacity-60 transition-opacity duration-700"></div>
-
-                {/* Circular platform with olive background - smaller size */}
-                <div className="relative bg-brand-olive rounded-full p-4 md:p-5 lg:p-6 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.5),0_10px_40px_-10px_rgba(0,0,0,0.3)] group-hover:shadow-[0_40px_110px_-20px_rgba(0,0,0,0.6),0_15px_50px_-10px_rgba(0,0,0,0.4)] transition-all duration-500 border-2 border-brand-cream/20 ring-1 ring-brand-cream/10 ring-offset-2 ring-offset-transparent">
+                <div className="absolute inset-0 rounded-full bg-brand-copper/20 blur-3xl scale-110 opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+                <div className="relative bg-brand-forest rounded-full p-4 md:p-5 lg:p-6 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.5)] transition-all duration-500 border-2 border-brand-copper/30">
                   <img
                     src="/Venison.png"
-                    alt="Dennison's Venison Logo"
-                    className="h-24 md:h-28 lg:h-32 w-24 md:w-28 lg:w-32 rounded-full object-cover mx-auto group-hover:scale-105 transition-transform duration-700"
+                    alt="Dennisons Venison Logo"
+                    className="h-24 md:h-28 lg:h-32 w-24 md:w-28 lg:w-32 rounded-full object-cover mx-auto"
                   />
                 </div>
               </div>
             </motion.div>
 
-            <div>
-              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.1]">
-                From the hills<br />to your plate.
-              </h1>
-            </div>
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.1]">
+              From the hills<br />to your plate.
+            </h1>
 
             <p className="text-xl sm:text-2xl md:text-3xl mb-6 max-w-3xl mx-auto font-light leading-relaxed opacity-90">
               Founded by Lee Dennison, built on honesty, respect for the countryside, and the belief that everyone deserves access to good, natural food.
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="font-serif group inline-flex items-center justify-center bg-brand-cream text-brand-olive px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-white"
+                className="font-serif group inline-flex items-center justify-center bg-brand-copper text-brand-cream px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-brand-copper/90"
               >
                 Get in Touch
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -78,173 +78,269 @@ export default function Home() {
                 Our Venison
               </Link>
             </div>
-
-            {/* Quick links */}
-            <div className="mt-20 mb-16 flex flex-wrap justify-center gap-6">
-              <Link
-                href="/about"
-                className="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm border border-brand-cream/20 rounded-full hover:bg-white/20 hover:border-brand-cream/40 transition-all duration-300"
-              >
-                <svg className="w-5 h-5 text-brand-cream" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 19.5C4 18.837 4.5 18 5.5 18H18.5C19.5 18 20 18.837 20 19.5C20 20.163 19.5 21 18.5 21H5.5C4.5 21 4 20.163 4 19.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M6 18V3.5C6 3.224 6.224 3 6.5 3H17.5C17.776 3 18 3.224 18 3.5V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M9 7H15M9 11H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-                <span className="text-brand-cream font-medium">Our Story</span>
-              </Link>
-
-              <Link
-                href="/services"
-                className="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm border border-brand-cream/20 rounded-full hover:bg-white/20 hover:border-brand-cream/40 transition-all duration-300"
-              >
-                <svg className="w-5 h-5 text-brand-cream" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5"/>
-                  <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1"/>
-                  <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1"/>
-                  <circle cx="12" cy="12" r="0.5" fill="currentColor"/>
-                  <path d="M12 4V7M12 17V20M4 12H7M17 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-                <span className="text-brand-cream font-medium">Deer Management</span>
-              </Link>
-
-              <Link
-                href="/products"
-                className="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm border border-brand-cream/20 rounded-full hover:bg-white/20 hover:border-brand-cream/40 transition-all duration-300"
-              >
-                <svg className="w-5 h-5 text-brand-cream" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="7" y="6" width="10" height="12" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M7 10H17M7 14H17" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2"/>
-                  <circle cx="12" cy="8" r="0.5" fill="currentColor"/>
-                  <circle cx="12" cy="12" r="0.5" fill="currentColor"/>
-                  <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
-                </svg>
-                <span className="text-brand-cream font-medium">Wild Venison</span>
-              </Link>
-            </div>
           </div>
         </section>
 
-        {/* Image Showcase Section */}
-        <section className="py-24 bg-brand-gray">
+        {/* Photo Showcase - The Land & The Food */}
+        <section className="py-20 bg-brand-stone">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid md:grid-cols-2 gap-8 mb-24">
+            {/* Bento-style photo grid */}
+            <div className="grid md:grid-cols-3 gap-5 mb-5">
+              {/* Large left - Scotland landscape */}
               <motion.div
-                whileInView={{ x: [-20, 0] }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+                transition={{ duration: 0.7 }}
+                className="md:col-span-2 relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
               >
                 <img
                   src="/scotland1.jpg"
-                  alt="Wild venison from Dennison's Venison"
+                  alt="Scottish Highlands landscape"
                   loading="lazy"
-                  className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[350px] md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
-                  <p className="text-white text-2xl font-bold">From the Scottish Highlands</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-8">
+                  <p className="text-white text-2xl md:text-3xl font-bold font-serif">From the Scottish Highlands</p>
+                </div>
+              </motion.div>
+
+              {/* Right - venison meat */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
+              >
+                <img
+                  src="/Venison Meat - hero image"
+                  alt="Wild venison meat"
+                  loading="lazy"
+                  className="w-full h-[350px] md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-6">
+                  <p className="text-white text-xl md:text-2xl font-bold font-serif">Wild Venison</p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Second row - 3 equal columns */}
+            <div className="grid md:grid-cols-3 gap-5 mb-5">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.05 }}
+                className="relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
+              >
+                <img
+                  src="/venison stew - hero"
+                  alt="Venison stew"
+                  loading="lazy"
+                  className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-6">
+                  <p className="text-white text-xl font-bold font-serif">Organic & Delicious</p>
                 </div>
               </motion.div>
 
               <motion.div
-                whileInView={{ x: [20, 0] }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(91,91,71,0.4)] group"
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
               >
                 <img
-                  src="/WhatsApp Image 2025-10-19 at 10.39.24_5ad32a1d.jpg"
-                  alt="Ethical deer management by Lee Dennison"
+                  src="/lee with deer.jpeg"
+                  alt="Lee Dennison with deer"
                   loading="lazy"
-                  className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[280px] object-cover object-bottom group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/80 to-transparent flex items-end p-8">
-                  <p className="text-white text-2xl font-bold">Ethical & Sustainable</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-6">
+                  <p className="text-white text-xl font-bold font-serif">Ethical & Sustainable</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.25 }}
+                className="relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
+              >
+                <img
+                  src="/pie - eaten"
+                  alt="Venison pie"
+                  loading="lazy"
+                  className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-6">
+                  <p className="text-white text-xl font-bold font-serif">From Field to Your Plate</p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Third row - BBQ stall + Scotland */}
+            <div className="grid md:grid-cols-3 gap-5">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
+              >
+                <img
+                  src="/WhatsApp Image 2025-10-17 at 15.35.25_be617f51.jpg"
+                  alt="Dennisons Venison pop-up BBQ stall"
+                  loading="lazy"
+                  className="w-full h-[350px] md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-6">
+                  <p className="text-white text-xl md:text-2xl font-bold font-serif">Pop-Up BBQs</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="md:col-span-2 relative overflow-hidden rounded-3xl shadow-[0_20px_60px_-20px_rgba(45,59,45,0.3)] group"
+              >
+                <img
+                  src="/scottish scene2.jpeg"
+                  alt="Scottish countryside"
+                  loading="lazy"
+                  className="w-full h-[350px] md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent flex items-end p-8">
+                  <p className="text-white text-2xl md:text-3xl font-bold font-serif">Countryside Management</p>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Quick Overview Section */}
-        <section className="py-24 bg-brand-cream">
+        {/* What We Do - Cards */}
+        <section className="py-20 bg-brand-cream">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-olive mb-6">
-                Wild • Honest • Fair
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-charcoal mb-6">
+                Wild - Honest - Fair
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-10">
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
+            >
               {[
                 {
-                  icon: (
-                    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Book icon */}
-                      <path d="M20 75C20 72 22 70 25 70H75C78 70 80 72 80 75C80 78 78 80 75 80H25C22 80 20 78 20 75Z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M27 70V20C27 18 28 17 29 17H71C73 17 74 18 74 20V70" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M37 35H63M37 50H63" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                    </svg>
-                  ),
                   title: "About Us",
-                  desc: "Over 10 years' experience in ethical deer management across the UK",
-                  link: "/about"
+                  desc: "Over 10 years experience in ethical deer management across the UK",
+                  link: "/about",
+                  image: "/Lee1.jpg"
                 },
                 {
-                  icon: (
-                    <img src="/Venison.png" alt="Deer logo" loading="lazy" className="w-full h-full object-contain" />
-                  ),
                   title: "Our Venison",
                   desc: "Wild, locally sourced, and processed to the highest food-hygiene standards",
-                  link: "/products"
+                  link: "/products",
+                  image: "/Butchers pack - fillets haunch"
                 },
                 {
-                  icon: (
-                    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Target/management icon */}
-                      <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="50" cy="50" r="20" stroke="currentColor" strokeWidth="1.5"/>
-                      <circle cx="50" cy="50" r="10" stroke="currentColor" strokeWidth="1.5"/>
-                      <circle cx="50" cy="50" r="3" fill="currentColor"/>
-                      <path d="M50 20 L50 35 M50 65 L50 80 M20 50 L35 50 M65 50 L80 50" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  ),
+                  title: "Our Food",
+                  desc: "Pop-up BBQs, freezer packs, and venison for your next event",
+                  link: "/events",
+                  image: "/pie - cut"
+                },
+                {
+                  title: "Shooting Days",
+                  desc: "Mentored introduction to shooting for complete beginners",
+                  link: "/shooting-days",
+                  image: "/hunter - man sunset .jpeg"
+                },
+                {
                   title: "Services",
                   desc: "Professional deer management for estates, farms, and woodland owners",
-                  link: "/services"
+                  link: "/services",
+                  image: "/scotland4.jpg"
                 }
               ].map((card, i) => (
                 <Link
                   key={i}
                   href={card.link}
-                  className="group block bg-brand-gray pt-10 px-10 pb-14 rounded-3xl shadow-[0_20px_60px_-20px_rgba(91,91,71,0.2)] hover:shadow-[0_30px_80px_-20px_rgba(91,91,71,0.35)] border border-brand-olive/10 hover:border-brand-olive/30 transition-all duration-500 hover:-translate-y-2"
+                  className="group block rounded-3xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(45,59,45,0.2)] hover:shadow-[0_30px_80px_-20px_rgba(45,59,45,0.35)] border border-brand-forest/10 hover:border-brand-copper/30 transition-all duration-500 hover:-translate-y-2 bg-brand-stone"
                 >
-                  {/* Elegant line icon */}
-                  <div className="mb-8 flex justify-center">
-                    <div className="relative">
-                      {/* Background circle */}
-                      <div className="w-28 h-28 rounded-full bg-[#5b5b47] flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(91,91,71,0.3)] group-hover:shadow-[0_15px_40px_-10px_rgba(91,91,71,0.4)] transition-all duration-500 group-hover:scale-105 p-4">
-                        {/* Icon */}
-                        <div className="w-full h-full text-[#fffff0] group-hover:scale-110 transition-transform duration-500">
-                          {card.icon}
-                        </div>
-                      </div>
-                    </div>
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 to-transparent"></div>
                   </div>
-
-                  <h3 className="font-serif text-2xl font-bold text-brand-olive mb-4">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    {card.desc}
-                  </p>
-                  <div className="mt-6 mb-4 inline-flex items-center text-brand-olive font-semibold group-hover:translate-x-2 transition-transform">
-                    Learn more →
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-bold text-brand-charcoal mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed text-sm">
+                      {card.desc}
+                    </p>
+                    <div className="mt-4 inline-flex items-center text-brand-copper font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                      Learn more →
+                    </div>
                   </div>
                 </Link>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
+
+        {/* Footer */}
+        <footer className="py-16 bg-brand-charcoal text-brand-cream">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+            <p className="font-serif text-2xl font-bold mb-4">Dennisons Venison</p>
+            <p className="text-brand-cream/70 mb-6">Wild - Honest - Fair</p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
+              <Link href="/about" className="text-brand-copper hover:text-brand-copper/80 transition-colors">About</Link>
+              <Link href="/products" className="text-brand-copper hover:text-brand-copper/80 transition-colors">Venison</Link>
+              <Link href="/events" className="text-brand-copper hover:text-brand-copper/80 transition-colors">Our Food</Link>
+              <Link href="/shooting-days" className="text-brand-copper hover:text-brand-copper/80 transition-colors">Shooting Days</Link>
+              <Link href="/services" className="text-brand-copper hover:text-brand-copper/80 transition-colors">Services</Link>
+              <Link href="/contact" className="text-brand-copper hover:text-brand-copper/80 transition-colors">Contact</Link>
+            </div>
+            <div className="flex justify-center gap-4">
+              <a
+                href="https://www.facebook.com/share/18NwAMn6Eu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-brand-cream/60 hover:text-brand-copper transition-colors"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/dennisons.venison?utm_source=qr&igsh=MXEyemU2eW9xb2gxdQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-brand-cream/60 hover:text-brand-copper transition-colors"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   )
